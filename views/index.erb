@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Currencies</title>
+  <title>Currency Pairs</title>
 </head>
 <body>
-  <h1>Currencies</h1>
+  <h1>Currency Pairs</h1>
   <ul>
     <% @currencies.each do |currency| %>
-      <li><%= currency %></li>
+      <li><a href="/<%= currency %>">Convert to <%= currency %></a></li>
     <% end %>
   </ul>
 </body>
