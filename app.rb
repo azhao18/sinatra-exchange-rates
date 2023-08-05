@@ -11,9 +11,12 @@ def get_symbols
   JSON.parse(response)["symbols"].keys
 end
 
+#get '/' do
+#  @currencies = get_symbols
+#  erb :index
+#end
 get '/' do
-  @currencies = get_symbols
-  erb :index
+  redirect to('/USD')
 end
 
 get '/:currency' do
