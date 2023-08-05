@@ -15,3 +15,9 @@ get '/' do
   @currencies = get_symbols
   erb :index
 end
+
+get '/:currency' do
+  @base_currency = params['currency'].upcase
+  @other_currencies = get_symbols - [@base_currency]
+  erb :conversion
+end
