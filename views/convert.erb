@@ -6,6 +6,6 @@
 <body>
   <h1>Convert <%= params['base_currency'].upcase %> to <%= params['target_currency'].upcase %></h1>
   <p><%= @conversion_text %></p>
-  <p><a href="/">Back to list of currencies</a></p>
+  <p><a href="/<%= params['base_currency'] %>">Back</a></p>
 </body>
 </html>

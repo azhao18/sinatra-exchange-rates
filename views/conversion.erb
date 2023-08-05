@@ -7,7 +7,7 @@
   <h1>Convert <%= @base_currency %></h1>
   <ul>
     <% @other_currencies.each do |currency| %>
-      <li>Convert 1 <%= @base_currency %> to 1 <%= currency %></li>
+      <li><a href="/<%= @base_currency %>/<%= currency %>">Convert 1 <%= @base_currency %> to <%= currency %>...</a></li>
     <% end %>
   </ul>
   <p><a href="/">Back to list of currencies</a></p>
